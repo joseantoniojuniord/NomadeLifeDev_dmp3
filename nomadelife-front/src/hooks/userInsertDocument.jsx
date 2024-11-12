@@ -20,7 +20,7 @@ const insertReducer = (state, action) => {
     }
 }
 
-export const useInsertDocument = (docCollection) => {
+export const userInsertDocument = (docCollection) => {
     const [response, dispath] = useReducer(insertReducer, initialState)
     const [cancelled, setCancelled] = useState(false)
 
@@ -36,7 +36,7 @@ export const useInsertDocument = (docCollection) => {
         try{
             const newDocument = {...document, createAt: Timestamp.now()}
             const insertDocument = await addDoc(
-                collection(db, dbCollection),
+                collection(db, docCollection),
                 newDocument
             )
 
@@ -61,3 +61,5 @@ export const useInsertDocument = (docCollection) => {
         response
     }
 }
+
+export default userInsertDocument

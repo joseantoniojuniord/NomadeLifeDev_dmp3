@@ -33,3 +33,4 @@ export const useFethDocument = (docCollection, id) => {
         error
     }
 }
+
