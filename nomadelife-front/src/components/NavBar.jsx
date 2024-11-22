@@ -25,7 +25,7 @@ const NavBar = () => {
             <>
               <li>
                 <NavLink to="/login" className={(({ isActive }) => (isActive ? styles.active : ""))}>
-                  Login
+                  Entrar
                 </NavLink>
               </li>
               <li>
@@ -39,7 +39,7 @@ const NavBar = () => {
             <>
               <li>
                 <NavLink to="/post/create" className={(({ isActive }) => (isActive ? styles.active : ""))}>
-                  New Post
+                  Novo Post
                 </NavLink>
               </li>
               <li>
@@ -47,9 +47,12 @@ const NavBar = () => {
                   Dashboard
                 </NavLink>
               </li>
+                <NavLink to="/about" className={(({ isActive }) => (isActive ? styles.active : ""))}>
+                    Sobre
+                </NavLink>
               <li>
                 <button onClick={logout} className={styles.exit}>
-                  Exit
+                  Sair
                 </button>
               </li>
             </>

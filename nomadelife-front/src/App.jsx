@@ -13,15 +13,18 @@ import { useAuthentication } from "./hooks/useAuthentication"
 // pages
 import Home from "./pages/Home/Home"
 import About from "./pages/About/About"
+import Post from "./pages/Post/Post"
 
 
 // components
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import CreatePost from "./pages/CreatePost/CreatePost"
+import Search from "./pages/Search/Search"
 import Login from "./pages/Login/Login"
 import Register from "./pages/Register/Register"
 import Dashboard from "./pages/Dashboard/Dashboard"
+import EditPost from "./pages/EditPost/EditPost"
 
 
 // context
@@ -59,6 +62,9 @@ function App() {
               <Route path='/register'element={<Register/>}></Route>
               <Route path='/post/create'element={<CreatePost/>}></Route>
               <Route path='/dashboard'element={<Dashboard/>}></Route>
+              <Route path='/search' element={<Search/>}></Route>
+              <Route path="/posts/edit/:id" element={<EditPost/>}></Route>
+              <Route path="/Posts" element={<Post />}></Route>
             </Routes>
           </div>
           <Footer/>

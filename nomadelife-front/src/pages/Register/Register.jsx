@@ -88,7 +88,7 @@ const Register = () => {
       </form>
     </div>
   )
-  //#endregion
+ 
 }
 
 export default Register

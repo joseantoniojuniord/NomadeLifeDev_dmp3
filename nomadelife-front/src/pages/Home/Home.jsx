@@ -1,5 +1,5 @@
 import styles from './Home.module.css'
-import logo from '/logo-quadrada.png'
+
 
 import { useFetchDocuments } from '../../hooks/useFetchDocuments'
 import { Link, useNavigate } from 'react-router-dom'
@@ -36,7 +36,7 @@ const Home = () => {
       </form>
       <div className='post-list'>
         {loading && <p>Carregando...</p>}
-        {post && post.lenght === 0 &&(
+        {posts && posts.lenght === 0 && (
           <div className={styles.noposts}>Não encontramos postagens
           <Link to={"/posts/create"} className='btn'>
             Crie Este Post
